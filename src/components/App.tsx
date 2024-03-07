@@ -1,5 +1,6 @@
 import React from 'react';
-import { ITodo } from "../types/data"
+import { ITodo } from "../types/data";
+import TodoList from './TodoList';
 import { useState, useEffect, useRef } from "react";
 
 const App: React.FC = () => {
@@ -26,6 +27,7 @@ const App: React.FC = () => {
           onChange={(e) => setValue(e.target.value)} />
         <button onClick={addTodo}>Добавить</button>
       </div>
+      <TodoList items={todos} />
     </div>
   );
 }
