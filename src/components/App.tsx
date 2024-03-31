@@ -3,6 +3,7 @@ import TodoList from './TodoList';
 import { useState, useEffect, useRef } from "react";
 import { addTodo } from './../store/todoSlice';
 import { useAppDispatch } from '../hooks/hooks';
+import Form from './Form/Form';
 
 const App: React.FC= () => {
   const [value, setValue] = useState('');
@@ -29,6 +30,8 @@ const App: React.FC= () => {
       inputRef.current.focus();
     }
   }, []);*/
+  /*--------------------------------------------------------------------------------------------------------------*/
+  //react hook form
 
   return (
     <div className="App">
@@ -43,6 +46,9 @@ const App: React.FC= () => {
         <button onClick={handleAction}>Добавить</button>
       </div>
       <TodoList />
+      <hr />
+      <h2>react hook form</h2>
+      <Form/>
     </div>
   );
 }
