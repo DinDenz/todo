@@ -41,6 +41,16 @@ const Form: React.FC = () => {
     setValue("name", "Petya");
   };
 
+  /* function* iter (n=10) {
+    for (let i=0; i < n; i++) {
+        yield i
+    }
+  }
+  for (let k of iter(5)) {
+    console.log(k);
+  } */ // опыт с генератором
+
+
   return (
     <form onSubmit={handleSubmit(submit)}>
       <input
